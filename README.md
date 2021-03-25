@@ -15,32 +15,30 @@ In this repository we include a Geolog project with Geolog python loglans to uti
 This project demonstrates the tried and proven techniques as described by Phillips1 et al. used in the characterization of most Arab D reservoirs in Saudi Arabia. Permeability, Petrophysical Rock Types (PRT), Capillary Pressure and modeled saturations are all estimated or calculated in order to characterize this complex carbonate reservoirs, and Clerke’s2 Arab D Rosetta Stone core analysis database is used as the calibration data. These calibration data are from Ed Clerke’s Rosetta Stone, Arab-D carbonate dataset from Ghawar field. This is a very special carbonate dataset. Clerke randomly selected the final calibration data from 1,000’s of core plugs for the final data set, and these Rosetta Stone data cover the full range in poro-perm space and Petrophysical Rock Types (PRTs) observed in the Arab D reservoir. For each sample Clerke acquired High Pressure Mercury Injection (HPMI) data and fit the capillary pressure curves using a Thomeer hyperbola (see Figure 1) created from the Initial Displacement Pressure (Pdi), curvature term Gi that relates to the variability of pore throats and Bulk Volume Occupied (BVocci) that is related to the Pore Volume of each pore system i.  For this Arab D reservoir, most rock types have a dual pore system and some rock types have up to 3 pore systems. 
 
 This workflow and processing is suggested to the user to interrogate, process, interpret and model the petrophysical properties of a typical Arab D carbonate reservoir using Clerke’s Arab D Rosetta Stone Carbonate database as calibration data. The workflow consists of the following:
-•	Interrogate the well log and Rosetta Stone calibration data using python’s Altair all driven from a Geolog Launcher.
 
-Altair Used to Interrogate the Well log data in Geolog:
+### Workflow:
+1) Interrogate the well log and Rosetta Stone calibration data using python’s Altair all driven from a Geolog Launcher.
+
+  Altair Used to Interrogate the Well log data in Geolog:
 
 ![Geolog_Image](Geolog20_ArabD.gif)
 
-Altair used to Interrogate the Rosetta Stone Thomeer Capillary Pressure curves and Petrophysical Rock Types (PRTs):
+  Altair used to Interrogate the Rosetta Stone Thomeer Capillary Pressure curves and Petrophysical Rock Types (PRTs):
 
 ![Geolog_Image](geolog_altair_thomeer.gif)
 
-
-
-•	Run MultiMin for a solid log analysis model using the typical minerals found in the Arab D reservoir; Limestone, Dolomite, Anhydrite and Illite.
-•	Use available core data from reservoir/field to build a petrophysical model to estimate permeability for all wells in field. In this instance we will used a python version of kNN driven from a Geolog python loglan to estimate permeability from well log data and petrophysical results.
-•	With the estimated permeability and calculated Total Porosity calculated from MultiMin on each well, query Clerke’s Rosetta Stone core database to predict the following:
-o	Petrophysical Rock Types (PRT) as defined by Clerke
-o	Thomeer Capillary Pressure parameters
-	Bulk Volume Occupied for up to 3 pore systems
-	Curvature term G for up to 3 pore systems
-	Bulk Volume Occupied for up to 3 pore systems
-•	Use the Thomeer Capillary Pressure parameters to model saturations based on the buoyancy due to fluid density differences and height above the Free Water Level (FWL). 
-•	As a secondary technique to test the python applications in Geolog, we also used python’s Sklearn as published by Hall3 to predict the PRTs. This could have been Depositions of Environment or other geologic facies used in this Sklearn prediction process. 
+2) Run MultiMin for a solid log analysis model using the typical minerals found in the Arab D reservoir; Limestone, Dolomite, Anhydrite and Illite.
+3) Use available core data from reservoir/field to build a petrophysical model to estimate permeability for all wells in field. In this instance we will used a python version of kNN driven from a Geolog python loglan to estimate permeability from well log data and petrophysical results.
+3) With the estimated permeability and calculated Total Porosity calculated from MultiMin on each well, query Clerke’s Rosetta Stone core database to predict the following:
+  - Petrophysical Rock Types (PRT) as defined by Clerke
+  - Thomeer Capillary Pressure parameters
+4) Use the Thomeer Capillary Pressure parameters to model saturations based on the buoyancy due to fluid density differences and height above the Free Water Level (FWL). 
+5) As a secondary technique to test the python applications in Geolog, we also used python’s Sklearn as published by Hall3 to predict the PRTs. This could have been Depositions of Environment or other geologic facies used in this Sklearn prediction process. 
 
 
 
-RESOURCES
+
+RESOURCES
 https://www.pdgm.com/products/geolog/
 https://github.com/Philliec459?tab=repositories
 
