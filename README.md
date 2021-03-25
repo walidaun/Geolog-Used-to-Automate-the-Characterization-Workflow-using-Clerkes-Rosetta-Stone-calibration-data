@@ -15,10 +15,12 @@ The following workflow and processing is suggested to the user to interrogate, p
 1) Interrogate the Well Log data and Rosetta Stone calibration data using python’s Altair all driven from a Geolog Module Launcher.
 
 ![Geolog_Image](Geolog20_ArabD.gif)
-##### Altair Used to Interrogate the Well log data in Geolog:
+
+##### Altair Used to Interrogate the Well log data in Geolog
 
 ![Geolog_Image](geolog_altair_thomeer.gif)
-##### Altair used to Interrogate the Rosetta Stone Thomeer Capillary Pressure curves and Petrophysical Rock Types (PRTs):
+
+##### Altair used to Interrogate the Rosetta Stone Thomeer Capillary Pressure curves and Petrophysical Rock Types (PRTs)
 
 2) Run MultiMin for a solid log analysis model using the typical minerals found in the Arab D reservoir; Limestone, Dolomite, Anhydrite and Illite.
 
