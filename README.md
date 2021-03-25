@@ -38,7 +38,7 @@ This workflow and processing is suggested to the user to interrogate, process, i
 
 
 
-RESOURCES
+### RESOURCES:
 https://www.pdgm.com/products/geolog/
 
 https://github.com/Philliec459?tab=repositories
