@@ -1,4 +1,4 @@
-# Automating the workflow to use Clerke’s carbonate Arab D Rosetta Stone calibration data to provide for a full pore system characterization and model saturations for a typical Arab D complex carbonate reservoir.
+# Geolog used to Automate the characterization workflow using Clerke’s carbonate Arab D Rosetta Stone calibration data to provide for a full pore system characterization and model saturations for a typical Arab D complex carbonate reservoir.
 
 ![Emerson_Image](Emerson1.png)
 
