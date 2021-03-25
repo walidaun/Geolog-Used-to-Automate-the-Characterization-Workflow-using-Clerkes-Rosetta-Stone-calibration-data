@@ -1,4 +1,4 @@
-# Geolog used to Automate the characterization workflow using Clerke’s carbonate Arab D Rosetta Stone calibration data to provide for a full pore system characterization and model saturations for a typical Arab D complex carbonate reservoir.
+# Geolog used to automate the characterization workflow using Clerke’s carbonate Arab D Rosetta Stone calibration data to provide for a full pore system characterization and model saturations for a typical Arab D complex carbonate reservoir.
 
 Geolog has always been found to be a user friendly Petrophysical software tool that allows us to load, interrogate, process and display well log and production data. With the introduction of Geolog18, we can now also use python code in the form of Geolog loglans to push the data even further.  Geolog python loglans can exploit state-of-the-art techniques in python to interrogate and build probabilistic methods to estimate additional well log curves, core analysis results, rock types, facies, engineering parameters and model petrophysical properties. 
 
