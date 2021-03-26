@@ -28,7 +28,7 @@ The following workflow and processing is suggested to interrogate, process, inte
 3) Use available core data from representative reservoir/field to build a petrophysical model to estimate permeability for all wells in field using kNN with normalized input data and weighted by Euclidean distances for each of the nearest neighbors. In this instance our python version of kNN is driven from a Geolog python loglan from our log analysis results.
 
 4) Using the kNN estimated permeability and calculated Total Porosity from MultiMin, we query Clerke’s Rosetta Stone core database to predict the following Petrophysical results:
-    - Petrophysical Rock Types (PRT) as defined by Clerke (M_1, M_2, M_1_2, Type1 Meso, Type 1_1 Meso and Micro PRTs)
+    - Petrophysical Rock Types (PRT) as defined by Clerke (M_1 Macro/Meso, M_2 Macro/Micro, M_1_2 Macro/Meso/Micro, Type1 Meso, Type 1_1 Meso/Micro and Micro PRTs)
     - Thomeer Capillary Pressure parameters over the reservoir interval
 
 5) Use the Thomeer Capillary Pressure parameters to model saturations based on the buoyancy due to fluid density differences at height above the Free Water Level (FWL). 
