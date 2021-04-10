@@ -39,7 +39,7 @@ The following workflow and processing is suggested to interrogate, process, inte
 
 https://github.com/Philliec459/SKLEARN-used-to-predict-Petrophysical-Rock-Types-in-Arab-D-Carbonate
 
-The data can be evaluated within this notebook using Seaborn matrix plots, various types of a Confusion matrix plots and the SVM model C and Gamma parameters can be tuned from the Heat Map shown below.  However, be sure to change the C_REG and GAMMA input values for in Geolog per the most accurate C and gamma combination.
+The data can be evaluated within this notebook using Seaborn matrix plots, various types of a Confusion Matrix plots and the SVM model C and gamma parameters from the Heat Map shown below.  However, be sure to change the C_REG and GAMMA input values in Geolog for the most accurate C and gamma combination presented from the Heat Map.
 
 ![Geolog_Image](evaluate.png)
 
