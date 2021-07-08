@@ -24,11 +24,25 @@ The following workflow and processing is suggested to interrogate, process, inte
 
 2) Run MultiMin for a solid log analysis model using the typical minerals found in the Arab D reservoir; Limestone, Dolomite, Anhydrite and Illite. With MultiMin we always use environmentally corrected log data and use the calculated uncertainties for each log curve employed in the analysis. 
 
-To serve as an example we have created a python loglan that utilizes Scipy Optimize:
+To serve as an example we have created a python loglan that utilizes Scipy Optimize to estimate lithology:
 
     optimize_lith.pysh 
     
-This loglan first uses digitized chartbook data as the basis for our kNN Porosity (PHIT) and Rho Matrix density calculations used in this analysis. Once we estimate PHIT, we then use Scipy Optimize (minimze) to estimate our carbonate lithology. We would like to thank Andy McDonald and his Petrophysics Python Series for his examples and in particular we are using his hatch fill example in our optimization loglan.
+This loglan first uses digitized chartbook data as the basis for our kNN Porosity (PHIT) and Rho Matrix density calculations used in the analysis. Once we estimate PHIT, we then use Scipy Optimize (minimze) to estimate our carbonate lithology. 
+
+Our primary function is the following in Scipy trying to estimate volumes of Calcite and Dolomite.
+
+	fun = lambda x: (RHOB2 - (2.52*vol_illite + 2.71*x[0]+2.847*x[1]+PHIT*FD)) + (TNPH - (0.247*vol_illite + 0*x[0]+0.005*x[1]+PHIT*1))
+
+Which is using two log response functions that are to be minimized:
+
+	RHOB_theoretical =  2.52*vol_illite + 2.71*x[0]+2.847*x[1]+PHIT*FD
+
+	TNPH_theoretical =  0.247*vol_illite + 0*x[0]+0.005*x[1]+PHIT*1
+
+where res.x[0] = VOL_CALCITE and res.x[1] = VOL_DOLO. The objective is to minimize the difference between RHOB - RHOB_theoretical and TNPH - TNPH_theoretical while solving for our lithology. 
+
+We would like to thank Andy McDonald and his Petrophysics Python Series for his examples and in particular we are using his hatch fill example in our optimization loglan.
 
 This is all still considered work in progress, but please find below an example of the output.
 
