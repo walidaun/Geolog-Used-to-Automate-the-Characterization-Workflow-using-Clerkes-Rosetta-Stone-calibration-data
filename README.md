@@ -24,6 +24,16 @@ The following workflow and processing is suggested to interrogate, process, inte
 
 2) Run MultiMin for a solid log analysis model using the typical minerals found in the Arab D reservoir; Limestone, Dolomite, Anhydrite and Illite. With MultiMin we always use environmentally corrected log data and use the calculated uncertainties for each log curve employed in the analysis. 
 
+To serve as an example we have created a python loglan that utilizes Scipy Optimize:
+
+    optimize_lith.pysh 
+    
+This loglan first uses digitized chartbook data as the basis for our kNN Porosity (PHIT) and Rho Matrix density calculations used in this analysis. Once we estimate PHIT, we then use Scipy Optimize (minimze) to estimate our carbonate lithology. We would like to thank Andy McDonald and his Petrophysics Python Series for his examples and in particular we are using his hatch fill example in our optimization loglan.
+
+This is all still considered work in progress, but please find below an example of the output.
+
+![Geolog_Image](optimized_lith.png)
+
 3) Use available core data from the representative reservoir/field to build a petrophysical model to estimate permeability for all wells in field using our python loglan of kNN using normalized input data and weighted by Euclidean distances for each of the nearest neighbors. 
 
 4) Using the kNN estimated permeability and calculated Total Porosity (PHIT) from MultiMin, we query Clerke’s Rosetta Stone core database to predict the following Petrophysical results also using kNN:
