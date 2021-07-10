@@ -46,7 +46,7 @@ We would like to thank Andy McDonald and his Petrophysics Python Series for his 
 
 This is all still considered work in progress, but please find below an example of the output.
 
-![Geolog_Image](optimized_lith.png)
+![Geolog_Image](Optimize_lith_Geolog.png)
 
 3) Use available core data from the representative reservoir/field to build a petrophysical model to estimate permeability for all wells in field using our python loglan of kNN using normalized input data and weighted by Euclidean distances for each of the nearest neighbors. 
 
